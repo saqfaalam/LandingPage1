@@ -1,0 +1,211 @@
+/* General Styles */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  background-color: rgba(221, 221, 221, 0.4); /* Updated background color */
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%; /* Menggunakan nilai width 100% */
+  padding: 0; /* Menghapus padding */
+}
+
+.navbar-brand {
+  margin-left: 15px;
+  color: #12ce31;
+}
+
+.row {
+  float: right;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.col-sm {
+  color: white;
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Hero Image */
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.153), rgba(0, 0, 0, 0.107)),
+    url("foto/pantai.png");
+  width: 100vw;
+  height: 50vh; /* Changed height to viewport height */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  top: 0px;
+}
+
+.hero-text {
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+/* Popular Section */
+.popular {
+  margin-top: 20px;
+  padding-top: 20px;
+  margin-left: 30px;
+}
+
+#cover {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+
+#cover img {
+  width: 45%;
+  margin: 1.66%;
+  flex: 1;
+}
+
+/* Gallery */
+.box-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+
+.box-container .box {
+  height: 15rem;
+  width: 20rem;
+  border-radius: 1rem;
+  margin: 2rem;
+  overflow: hidden;
+  cursor: pointer;
+  flex: 25%;
+}
+
+.box-container .box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.box-container .box:hover img {
+  transform: scale(1.2);
+}
+
+/* News Section */
+.new-container {
+  display: flex;
+  flex-direction: column;
+  height: 550px;
+  padding: 20px 20px;
+}
+
+.konten {
+  display: flex;
+  flex: 1;
+  gap: 50px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  justify-content: space-around;
+  color: white;
+  display: flex;
+  background-color: black;
+  text-align: center;
+}
+
+.isi {
+  color: #dddddd40;
+  text-align: start;
+}
+
+/* Responsiveness */
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+
+  .home {
+    padding: 1rem 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: static;
+    width: 100%;
+    background-color: rgba(221, 221, 221, 0.8); /* Updated background color */
+  }
+
+  .navbar-brand {
+    margin-left: 10px;
+  }
+
+  .row {
+    float: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+  }
+
+  .col-sm {
+    padding: 10px 0;
+  }
+
+  .hero-image {
+    height: 40vh;
+  }
+
+  .hero-text {
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  #cover img {
+    width: 90%;
+    margin: 5%;
+  }
+
+  .box-container .box {
+    height: 12rem;
+    width: 14rem;
+    margin: 1rem;
+  }
+
+  .new-container {
+    height: auto;
+    padding: 20px;
+  }
+
+  .konten {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
